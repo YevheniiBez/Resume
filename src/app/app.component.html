@@ -3,6 +3,7 @@
     <side-bar></side-bar>
   </mat-drawer>
   <mat-drawer-content class="home__main-content">
+    <div class="cursor" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
