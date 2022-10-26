@@ -13,6 +13,9 @@ import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { LinkComponent } from './components/link/link.component';
+import { MousemoveDirective } from './components/mousemove.directive';
+import { AnimateitDirective } from './components/animateit.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     MySkillsComponent,
     ContactComponent,
     BlogComponent,
-    SideBarComponent
+    SideBarComponent,
+    LinkComponent,
+    MousemoveDirective,
+    AnimateitDirective
   ],
   imports: [
     BrowserModule,

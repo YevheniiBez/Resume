@@ -10,31 +10,32 @@
   }
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 100px auto;
+  text-align: center;
+}
+
 .cursor {
-  width: 30px;
-  height: 30px;
-  //border: 1px solid white;
-  border-radius: 50%;
-  position: absolute;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
   pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
 }
 
-@keyframes cursorAnim3 {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(3);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
+.hover-this:hover ~ .cursor {
+  transform:translate(-50%, -50%) scale(8);
 }
 
-.expand {
-  animation: cursorAnim3 2s forwards;
-  border: 1px solid purple;
+.hover-this {
+  :hover {
+    body #magicMouseCursor {
+      border: none !important;
+    }
+  }
 }

@@ -3,7 +3,14 @@
     <side-bar></side-bar>
   </mat-drawer>
   <mat-drawer-content class="home__main-content">
-    <div class="cursor" [style.top]="top" [style.left]="left" [ngClass]="{'expand':expand}"></div>
+    <div class="nav-wrapper">
+      <nav>
+        <app-link class="hover-this" appAnimateit [value]="'I'"></app-link>
+        <app-link class="hover-this" appAnimateit [value]="'LOVE'"></app-link>
+        <app-link class="hover-this" appAnimateit [value]="'YOU'"></app-link>
+        <div class="cursor" appMousemove></div>
+      </nav>
+    </div>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
