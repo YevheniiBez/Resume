@@ -19,6 +19,7 @@ describe('Navigation', () => {
     cy.getBySel('Work-Text-P');
   })
 
+
   it('Should go contact', () => {
     cy.getBySel('Side-Bar-Link-Contact').click();
     cy.getBySel('Contact-Text-P');
