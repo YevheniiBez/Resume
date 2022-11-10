@@ -28,7 +28,6 @@ export class AnimateitDirective {
     this.subscription = fromEvent<MouseEvent>(document, 'mousemove')
       .subscribe((e)=>{
         this.animateit(e);
-        console.log(111)
       });
   }
 

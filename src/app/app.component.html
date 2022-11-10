@@ -1,17 +1,21 @@
-<mat-drawer-container class="home">
-  <mat-drawer class="home__side-bar" mode="side" opened>
+<div class="home">
+  <div class="home__side-bar" mode="side" opened>
     <side-bar></side-bar>
-  </mat-drawer>
-  <mat-drawer-content class="home__main-content">
-    <div class="nav-wrapper">
-      <nav>
+  </div>
+  <div class="home__main-content">
+    <div class="text" *ngIf="isHome">
+        <app-link class="hover-this" appAnimateit [value]="'HI'"></app-link>
+      <br>
         <app-link class="hover-this" appAnimateit [value]="'I'"></app-link>
-        <app-link class="hover-this" appAnimateit [value]="'LOVE'"></app-link>
-        <app-link class="hover-this" appAnimateit [value]="'YOU'"></app-link>
-        <div class="cursor" appMousemove></div>
-      </nav>
+        <app-link class="hover-this" appAnimateit [value]="'AM'"></app-link>
+        <app-link class="hover-this" appAnimateit [value]="'EUGENE'"></app-link>
+      <br>
+        <app-link class="hover-this" appAnimateit [value]="'WEB'"></app-link>
+        <app-link class="hover-this" appAnimateit [value]="'DEVELOPER'"></app-link>
+      <div class="cursor" appMousemove data-cy="Home-Cursor-Div"></div>
     </div>
+    <div *ngIf="!isHome" class="cursor" appMousemove></div>
     <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+  </div>
+</div>
 `

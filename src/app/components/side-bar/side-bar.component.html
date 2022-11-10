@@ -1,19 +1,28 @@
 <nav>
   <ul class="navigation">
-    <li class="navigation__item magic-hover magic-hover__square">
-      <a class="navigation__link" [routerLink]="['/about']">About</a>
+    <li class="navigation__item">
+      <a [routerLink]="['/home']" routerLinkActive="navigation__item--active"
+         data-cy="Side-Bar-Link-Home">Home</a>
     </li>
-    <li class="navigation__item magic-hover magic-hover__square">
-      <a class="navigation__link" [routerLink]="['/my-skills']">My Skills</a>
+    <li class="navigation__item">
+      <a [routerLink]="['/about']" routerLinkActive="navigation__item--active"
+         data-cy="Side-Bar-Link-About">About</a>
     </li>
-    <li class="navigation__item magic-hover magic-hover__square">
-      <a class="navigation__link" [routerLink]="['/work']">Work</a>
+    <li class="navigation__item">
+      <a [routerLink]="['/my-skills']" routerLinkActive="navigation__item--active"
+         data-cy="Side-Bar-Link-My-Skills">My Skills</a>
     </li>
-    <li class="navigation__item magic-hover magic-hover__square">
-      <a class="navigation__link" [routerLink]="['/contact']">Contact</a>
+    <li class="navigation__item">
+      <a [routerLink]="['/work']" routerLinkActive="navigation__item--active"
+         data-cy="Side-Bar-Link-Work">Work</a>
     </li>
-    <li class="navigation__item magic-hover magic-hover__square">
-      <a class="navigation__link" [routerLink]="['/blog']">Blog</a>
+    <li class="navigation__item">
+      <a [routerLink]="['/contact']" routerLinkActive="navigation__item--active"
+         data-cy="Side-Bar-Link-Contact">Contact</a>
+    </li>
+    <li class="navigation__item">
+      <a [routerLink]="['/blog']" routerLinkActive="navigation__item--active"
+         data-cy="Side-Bar-Link-Blog">Blog</a>
     </li>
   </ul>
 </nav>

@@ -11,11 +11,11 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { BlogComponent } from './components/blog/blog.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { LinkComponent } from './components/link/link.component';
 import { MousemoveDirective } from './components/mousemove.directive';
 import { AnimateitDirective } from './components/animateit.directive';
+import { BlogModule } from './components/blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,6 @@ import { AnimateitDirective } from './components/animateit.directive';
     AboutComponent,
     MySkillsComponent,
     ContactComponent,
-    BlogComponent,
     SideBarComponent,
     LinkComponent,
     MousemoveDirective,
@@ -35,8 +34,8 @@ import { AnimateitDirective } from './components/animateit.directive';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BlogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

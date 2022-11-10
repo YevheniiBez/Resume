@@ -1,19 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 html {
   height: 100%;
+  width: 100%;
   cursor: none;
 }
 
 body {
   height: 100%;
+  width: 100%;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  cursor: none;
 }
 
 p {
   color: #ffff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }

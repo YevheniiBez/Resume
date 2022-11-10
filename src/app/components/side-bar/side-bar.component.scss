@@ -10,10 +10,12 @@
     padding-bottom: 10px;
     padding-top: 10px;
     color: #af9e9e;
+
+    :hover {
+    }
   }
 
-  &__link {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  &__item--active{
+    color: #fff;
   }
 }

@@ -11,6 +11,11 @@ import { WorkComponent } from './components/work/work.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: HomeComponent,
     title: 'Welcome page'
   },
@@ -36,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    component: BlogComponent,
+    loadChildren: () => import('./components/blog/blog.module').then((m) => m.BlogModule),
     title: 'Blog'
   },
 ];

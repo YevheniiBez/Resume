@@ -1,8 +1,6 @@
 import { AfterViewInit, ChangeDetectorRef, Component, HostListener, NgZone, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { TweenLite } from 'gsap';
-import { debounceTime, fromEvent, Observable } from 'rxjs';
-// @ts-ignore
-import { magicMouse } from 'magicmouse.js'
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { debounceTime, filter, fromEvent, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,17 +8,15 @@ import { magicMouse } from 'magicmouse.js'
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent implements OnInit {
-  constructor() {}
+export class AppComponent implements OnInit{
+  isHome = false;
+  constructor(private _router: Router) {}
 
-  ngOnInit(){
-    magicMouse({
-      "cursorOuter": "circle-basic",
-      "hoverEffect": "circle-move",
-      "hoverItemMove": false,
-      "defaultCursor": true,
-      "outerWidth": 30,
-      "outerHeight": 30
-    });
+  ngOnInit() {
+    this._router.events.
+      pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((e: any) => {
+        this.isHome = e.url === '/home';
+      });
   }
 }
