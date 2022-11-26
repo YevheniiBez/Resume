@@ -1,3 +1,5 @@
+import { PwaComponent } from './pwa/pwa.component';
+import { TestingComponent } from './testing/testing.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
@@ -25,6 +27,16 @@ const routes: Routes = [
     path: 'blog/agile',
     component: AgileComponent,
     title: 'Blog - Agile'
+  },
+  {
+    path: 'blog/testing',
+    component: TestingComponent,
+    title: 'Blog - Testing'
+  },
+  {
+    path: 'blog/pwa',
+    component: PwaComponent,
+    title: 'Blog - PWA'
   }
 ];
 
