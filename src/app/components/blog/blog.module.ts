@@ -8,11 +8,13 @@ import { UniversalComponent } from './universal/universal.component';
 import { AgileComponent } from './agile/agile.component';
 import { TestingComponent } from './testing/testing.component';
 import { PwaComponent } from './pwa/pwa.component';
+import { OwaspComponent } from './owasp/owasp.component';
+import { HttpComponent } from './http/http.component';
 
 
 
 @NgModule({
-  declarations: [BlogComponent, AccessibilityComponent, UniversalComponent, AgileComponent, TestingComponent, PwaComponent],
+  declarations: [BlogComponent, AccessibilityComponent, UniversalComponent, AgileComponent, TestingComponent, PwaComponent, OwaspComponent, HttpComponent],
   imports: [
     CommonModule,
     BlogRoutingModule,

@@ -1,3 +1,5 @@
+import { HttpComponent } from './http/http.component';
+import { OwaspComponent } from './owasp/owasp.component';
 import { PwaComponent } from './pwa/pwa.component';
 import { TestingComponent } from './testing/testing.component';
 import { NgModule } from '@angular/core';
@@ -37,6 +39,16 @@ const routes: Routes = [
     path: 'blog/pwa',
     component: PwaComponent,
     title: 'Blog - PWA'
+  },
+  {
+    path: 'blog/owasp',
+    component: OwaspComponent,
+    title: 'Blog - OWASP'
+  },
+  {
+    path: 'blog/http',
+    component: HttpComponent,
+    title: 'Blog - HTTP'
   }
 ];
 
